@@ -1,0 +1,19 @@
+name: "PODCAST GENERATOR"
+author: "Tiberiu Deliceanu"
+description: "Generates XML for podcasts from YAML"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "blue"
+inputs:
+  email:
+    description: The commiters email address
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: The commiters name
+    required: true
+    default: ${{ github.actor }}
